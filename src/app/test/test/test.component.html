@@ -1,0 +1,22 @@
+<h1>Scenario 1</h1>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Test title
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <button mat-flat-button
+            (click)="click()">
+      Test
+    </button>
+
+    <button mat-flat-button
+            (click)="clickOther()">
+      Test other
+    </button>
+    <ng-template #container></ng-template>
+  </mat-card-content>
+</mat-card>

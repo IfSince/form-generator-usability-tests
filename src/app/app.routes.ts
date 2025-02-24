@@ -8,7 +8,17 @@ export const routes: Routes = [
   },
   {
     path: 'scenario-1',
-    loadComponent: () => import('./testing/test-view/test.view').then(c => c.TestView),
-    title: 'Scenario 1'
+    loadComponent: () => import('./tests/first-scenario/first-scenario.component').then(c => c.FirstScenarioComponent),
+    title: 'Szenario 1'
+  },
+  {
+    path: 'scenario-2',
+    loadComponent: () => import('./tests/second-scenario/second-scenario.component').then(c => c.SecondScenarioComponent),
+    title: 'Szenario 2'
+  },
+  {
+    path: 'scenario-3',
+    loadComponent: () => import('./tests/third-scenario/third-scenario.component').then(c => c.ThirdScenarioComponent),
+    title: 'Szenario 3'
   }
 ];

@@ -1,0 +1,43 @@
+<h1>Szenario 2</h1>
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Erstellen eines einfachen Formulars
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>
+        Auch in diesem Szenario sollst du eine Form mit entsprechenden Eingabemöglichkeiten erstellen, allerdings für das Interface
+        “Employee” aus testdata/employee.ts.
+        Dabei gibt es einige Zusatzanforderungen:
+      </p>
+
+      <ul>
+        <li>Das Feld “employeeId” soll nicht in der Form enthalten</li>
+        <li>Der “lastName” muss aus technischen Gründen im Interface optional sein, die Eingabe soll allerdings verpflichtend sein</li>
+        <li>Das “dateOfBirth” muss aus technischen Gründen als String typisiert sein, die Eingabe soll allerdings über einen DatePicker
+          erfolgen
+        </li>
+        <li>Die Kontaktdaten (phoneNumber, email) sollen in der Form vor dem dateOfBirth stehen</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content>
+      Platzhalter - Füge hier den generierten Code ein.
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-actions>
+      <div class="btn-group btn-group__between">
+        <a mat-stroked-button [routerLink]="['/scenario-1']">Vorheriges Szenario</a>
+
+        <a mat-flat-button [routerLink]="['/scenario-3']">Nächstes Szenario</a>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
