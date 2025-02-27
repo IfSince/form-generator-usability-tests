@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core'
 import { MatAnchor } from '@angular/material/button'
-import { MatCard, MatCardActions, MatCardContent } from '@angular/material/card'
+import { MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card'
 import { RouterLink } from '@angular/router'
 import { MatFormField, MatLabel } from '@angular/material/form-field'
 import { MatInput } from '@angular/material/input'
@@ -28,9 +28,7 @@ export interface PersonForm {
   dateOfBirth: FormControl<string>
   isVerified: FormControl<boolean>
   address: FormGroup<AddressForm>
-  test: FormControl<string>
 }
-
 
 @Component({
   selector: 'app-first-scenario',
@@ -53,6 +51,8 @@ export interface PersonForm {
     MatOption,
     MatLabel,
     MatSlideToggle,
+    MatCardHeader,
+    MatCardTitle,
   ],
   templateUrl: './first-scenario.component.html',
   styleUrl: './first-scenario.component.css'
@@ -73,7 +73,6 @@ export class FirstScenarioComponent {
         houseNumber: [null],
         country: [null],
       }),
-      test: [null],
     })
   }
 }

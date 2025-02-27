@@ -1,12 +1,14 @@
+import { UUID } from './uuid'
+
 export class ContactDetails {
   phoneNumber: string
   email?: string
 }
 
 interface Employee {
-  employeeId: string
+  employeeId: UUID
   firstName: string
   lastName?: string
   dateOfBirth: string
-  contactDetails: Omit<ContactDetails, 'status'>
+  contactDetails: ContactDetails
 }
