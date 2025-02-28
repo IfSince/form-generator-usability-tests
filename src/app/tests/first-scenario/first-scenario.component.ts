@@ -10,6 +10,7 @@ import { MatCheckbox } from '@angular/material/checkbox'
 import { MatOption, MatSelect } from '@angular/material/select'
 import { provideNativeDateAdapter } from '@angular/material/core'
 import { MatSlideToggle } from '@angular/material/slide-toggle'
+import { MatSlider, MatSliderThumb } from '@angular/material/slider'
 
 enum Country {
   Germany = 'Germany',
@@ -25,8 +26,8 @@ class AddressForm {
 export interface PersonForm {
   firstName: FormControl<string>
   lastName: FormControl<string>
-  dateOfBirth: FormControl<string>
   isVerified: FormControl<boolean>
+  dateOfBirth: FormControl<string>
   address: FormGroup<AddressForm>
 }
 
@@ -53,6 +54,8 @@ export interface PersonForm {
     MatSlideToggle,
     MatCardHeader,
     MatCardTitle,
+    MatSlider,
+    MatSliderThumb,
   ],
   templateUrl: './first-scenario.component.html',
   styleUrl: './first-scenario.component.css'
@@ -66,8 +69,8 @@ export class FirstScenarioComponent {
     this.formGroup = this.formBuilder.group({
       firstName: [null],
       lastName: [null],
-      dateOfBirth: [null],
       isVerified: [null],
+      dateOfBirth: [null],
       address: this.formBuilder.group({
         street: [null],
         houseNumber: [null],
